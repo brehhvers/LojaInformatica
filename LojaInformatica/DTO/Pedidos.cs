@@ -9,7 +9,7 @@ namespace LojaInformatica
     internal class Pedidos
     {
         private int idPedido;
-        private string idProduto;
+        private string produto;
         private string idFornecedor;
         private DateTime dataPedido;
         private double precoUnitario;
@@ -17,7 +17,7 @@ namespace LojaInformatica
         private double total;
         private string formaPagamento;
 
-        public string IdProduto { set { idProduto = value; } get { return idProduto; } }
+        public string Produto { set { produto = value; } get { return produto; } }
         public string IdFornecedor { set { idFornecedor = value;} get { return idFornecedor;} }
         public DateTime DataPedido { set { dataPedido = value;} get { return dataPedido; } }
         public double PrecoUnitario { set { precoUnitario = value; } get { return precoUnitario; } }

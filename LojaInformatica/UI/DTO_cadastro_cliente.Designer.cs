@@ -175,6 +175,7 @@
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.Size = new System.Drawing.Size(668, 126);
             this.dgvCliente.TabIndex = 21;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // txtCpf
             // 

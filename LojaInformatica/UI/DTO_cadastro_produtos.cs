@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LojaInformatica
 {
@@ -15,8 +16,21 @@ namespace LojaInformatica
         public CadastroProdutos()
         {
             InitializeComponent();
+            LerDados();
         }
 
+        private void LerDados()
+        {
+            var conexao = FabricaConexao.Conectar();
+            string sql = "SELECT * FROM produto ORDER BY id_produto";
+            MySqlDataAdapter adap = new MySqlDataAdapter(sql, conexao);
+            DataTable tbProdutos = new DataTable();
+            adap.Fill(tbProdutos);
+            dgvProduto.DataSource = tbProdutos;
+            dgvProduto.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+            dgvProduto.AlternatingRowsDefaultCellStyle.ForeColor = Color.Gray;
+            dgvProduto.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14);
+        }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string descricao = txtDescricao.Text;
@@ -37,7 +51,7 @@ namespace LojaInformatica
 
             MessageBox.Show("Dados inseridos com sucesso!");
 
-
+            LerDados();
         }
 
         private void clienteToolStripMenuItem1_Click_1(object sender, EventArgs e)

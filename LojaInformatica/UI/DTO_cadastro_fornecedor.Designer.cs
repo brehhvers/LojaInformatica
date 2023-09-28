@@ -36,6 +36,7 @@
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvFornecedor = new System.Windows.Forms.DataGridView();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,10 +54,9 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -127,7 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.dgvProduto);
+            this.panel1.Controls.Add(this.dgvFornecedor);
             this.panel1.Controls.Add(this.txtCnpj);
             this.panel1.Controls.Add(this.txtTelefone);
             this.panel1.Controls.Add(this.label7);
@@ -145,6 +145,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(719, 460);
             this.panel1.TabIndex = 13;
+            // 
+            // dgvFornecedor
+            // 
+            this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedor.Location = new System.Drawing.Point(26, 317);
+            this.dgvFornecedor.Name = "dgvFornecedor";
+            this.dgvFornecedor.Size = new System.Drawing.Size(668, 126);
+            this.dgvFornecedor.TabIndex = 25;
             // 
             // txtCnpj
             // 
@@ -295,14 +303,6 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dgvProduto
-            // 
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(26, 317);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.Size = new System.Drawing.Size(668, 126);
-            this.dgvProduto.TabIndex = 25;
-            // 
             // CadastroFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,9 +317,9 @@
             this.Text = "CadastroFuncionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,6 +352,6 @@
         private System.Windows.Forms.TextBox txtInscEstadual;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtCnpj;
-        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridView dgvFornecedor;
     }
 }

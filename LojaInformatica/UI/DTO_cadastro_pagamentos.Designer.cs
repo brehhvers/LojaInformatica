@@ -43,13 +43,13 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvPagamento = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -171,7 +171,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel1.Controls.Add(this.dgvProduto);
+            this.panel1.Controls.Add(this.dgvPagamento);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtTipo);
             this.panel1.Controls.Add(this.btnCadastrar);
@@ -181,6 +181,14 @@
             this.panel1.Size = new System.Drawing.Size(719, 460);
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dgvPagamento
+            // 
+            this.dgvPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPagamento.Location = new System.Drawing.Point(26, 317);
+            this.dgvPagamento.Name = "dgvPagamento";
+            this.dgvPagamento.Size = new System.Drawing.Size(668, 126);
+            this.dgvPagamento.TabIndex = 22;
             // 
             // pictureBox1
             // 
@@ -200,14 +208,6 @@
             this.txtTipo.Size = new System.Drawing.Size(668, 27);
             this.txtTipo.TabIndex = 20;
             // 
-            // dgvProduto
-            // 
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(26, 317);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.Size = new System.Drawing.Size(668, 126);
-            this.dgvProduto.TabIndex = 22;
-            // 
             // CadastroPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,8 +223,8 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,6 +247,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridView dgvPagamento;
     }
 }

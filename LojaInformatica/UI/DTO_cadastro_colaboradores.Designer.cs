@@ -36,6 +36,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvColaborador = new System.Windows.Forms.DataGridView();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,10 +56,9 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaborador)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -129,7 +129,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.dgvProduto);
+            this.panel1.Controls.Add(this.dgvColaborador);
             this.panel1.Controls.Add(this.txtCpf);
             this.panel1.Controls.Add(this.txtTelefone);
             this.panel1.Controls.Add(this.label8);
@@ -149,6 +149,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(719, 460);
             this.panel1.TabIndex = 13;
+            // 
+            // dgvColaborador
+            // 
+            this.dgvColaborador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColaborador.Location = new System.Drawing.Point(26, 317);
+            this.dgvColaborador.Name = "dgvColaborador";
+            this.dgvColaborador.Size = new System.Drawing.Size(668, 126);
+            this.dgvColaborador.TabIndex = 28;
             // 
             // txtCpf
             // 
@@ -317,14 +325,6 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dgvProduto
-            // 
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(26, 317);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.Size = new System.Drawing.Size(668, 126);
-            this.dgvProduto.TabIndex = 28;
-            // 
             // CadastroColaboradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,9 +339,9 @@
             this.Text = "CadastroColaboradores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaborador)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,6 +376,6 @@
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtCpf;
-        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridView dgvColaborador;
     }
 }

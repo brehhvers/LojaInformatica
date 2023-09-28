@@ -40,6 +40,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.cmbPagamento = new System.Windows.Forms.ComboBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,10 +56,9 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -158,7 +158,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel1.Controls.Add(this.dgvProduto);
+            this.panel1.Controls.Add(this.dgvPedido);
             this.panel1.Controls.Add(this.cmbPagamento);
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.label8);
@@ -178,6 +178,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(719, 460);
             this.panel1.TabIndex = 19;
+            // 
+            // dgvPedido
+            // 
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(26, 317);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.Size = new System.Drawing.Size(668, 126);
+            this.dgvPedido.TabIndex = 36;
             // 
             // cmbPagamento
             // 
@@ -320,14 +328,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Produto";
             // 
-            // dgvProduto
-            // 
-            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduto.Location = new System.Drawing.Point(26, 317);
-            this.dgvProduto.Name = "dgvProduto";
-            this.dgvProduto.Size = new System.Drawing.Size(668, 126);
-            this.dgvProduto.TabIndex = 36;
-            // 
             // CadastroPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +344,7 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,6 +379,6 @@
         private System.Windows.Forms.TextBox txtPrecoUnit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbPagamento;
-        private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.DataGridView dgvPedido;
     }
 }

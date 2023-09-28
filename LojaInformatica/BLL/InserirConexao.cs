@@ -84,7 +84,7 @@ namespace LojaInformatica
             {
                 var conexao = FabricaConexao.Conectar();
                 var comando = conexao.CreateCommand();
-                comando.CommandText = "insert into PRODUTO(descricao, categoria, precoCompra, precoVenda, qtdEstoque) values ('" + Pro.Descricao +"', '" + Pro.Categoria + "', '" + Pro.PrecoCompra + "', '" + Pro.PrecoVenda + "','" + Pro.QtdEstoque + "')";
+                comando.CommandText = "insert into PRODUTO(descricao, categoria, preco_compra, preco_venda, qtd_estoque) values ('" + Pro.Descricao +"', '" + Pro.Categoria + "', '" + Pro.PrecoCompra + "', '" + Pro.PrecoVenda + "','" + Pro.QtdEstoque + "')";
 
                 comando.ExecuteNonQuery();
             }
@@ -105,7 +105,7 @@ namespace LojaInformatica
             {
                 var conexao = FabricaConexao.Conectar();
                 var comando = conexao.CreateCommand();
-                comando.CommandText = "insert into PEDIDO(idProduto, idFornecedor, data_pedido, preco_unitario, quantidade, total, forma_pagamento) values ('" + Ped.IdProduto + "', '" + Ped.IdFornecedor + "', '" + Ped.DataPedido + "', '" + Ped.PrecoUnitario + "','" + Ped.Quantidade + "', '" + Ped.Total + "', '" + Ped.FormaPagamento + "')";
+                comando.CommandText = "insert into PEDIDO(id_fornecedor_fk, data_pedido, preco_unitario, quantidade, total, forma_pagamento, produto) values ('" + Ped.IdFornecedor + "', '" + Ped.DataPedido + "', '" + Ped.PrecoUnitario + "','" + Ped.Quantidade + "', '" + Ped.Total + "', '" + Ped.FormaPagamento + "', '" + Ped.Produto + "')";
 
                 comando.ExecuteNonQuery();
             }
