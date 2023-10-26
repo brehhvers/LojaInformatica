@@ -56,6 +56,7 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColaborador)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -157,6 +158,7 @@
             this.dgvColaborador.Name = "dgvColaborador";
             this.dgvColaborador.Size = new System.Drawing.Size(668, 126);
             this.dgvColaborador.TabIndex = 28;
+            this.dgvColaborador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColaborador_CellContentClick);
             // 
             // txtCpf
             // 
@@ -325,12 +327,22 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(57, 78);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(15, 13);
+            this.lblId.TabIndex = 14;
+            this.lblId.Text = "id";
+            // 
             // CadastroColaboradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 575);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
@@ -377,5 +389,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.DataGridView dgvColaborador;
+        private System.Windows.Forms.Label lblId;
     }
 }

@@ -36,7 +36,8 @@ namespace LojaInformatica
         {
             string produto = cmbProduto.Text;
             string fornecedor = cmbFornecedor.Text;
-            DateTime data = dtpDataPedido.Value;
+            DateTime data = DateTime.Now;
+            MessageBox.Show(data.ToString());
             string pagamento = cmbPagamento.Text;
             double precoUnit = double.Parse(txtPrecoUnit.Text);
             int quantidade = int.Parse(txtQuant.Text);
@@ -104,6 +105,24 @@ namespace LojaInformatica
         private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgr = dgvPedido.Rows[e.RowIndex];
+            lblId.Text = dgr.Cells[0].Value.ToString();
+            cmbProduto.Text = dgr.Cells[7].Value.ToString();
+            cmbFornecedor.Text = dgr.Cells[1].Value.ToString();
+            dtpDataPedido.Text = dgr.Cells[2].Value.ToString();
+            cmbPagamento.Text = dgr.Cells[6].Value.ToString();
+            txtPrecoUnit.Text = dgr.Cells[3].Value.ToString();
+            txtQuant.Text = dgr.Cells[4].Value.ToString();
+            txtPrecoUnit.Text = dgr.Cells[5].Value.ToString();
+        }
+
+        private void dtpDataPedido_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

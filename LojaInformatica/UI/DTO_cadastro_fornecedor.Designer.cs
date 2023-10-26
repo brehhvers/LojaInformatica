@@ -54,6 +54,7 @@
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -153,6 +154,7 @@
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.Size = new System.Drawing.Size(668, 126);
             this.dgvFornecedor.TabIndex = 25;
+            this.dgvFornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedor_CellContentClick);
             // 
             // txtCnpj
             // 
@@ -303,12 +305,22 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(37, 78);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(15, 13);
+            this.lblId.TabIndex = 15;
+            this.lblId.Text = "id";
+            // 
             // CadastroFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 575);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtCnpj;
         private System.Windows.Forms.DataGridView dgvFornecedor;
+        private System.Windows.Forms.Label lblId;
     }
 }

@@ -111,10 +111,17 @@ namespace LojaInformatica
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow dgr = dgvCliente.Rows[e.RowIndex];
+            lblId.Text = dgr.Cells[0].Value.ToString();
             txtNome.Text = dgr.Cells[1].Value.ToString();
             txtCpf.Text = dgr.Cells[2].Value.ToString();
             txtEmail.Text = dgr.Cells[3].Value.ToString();
             txtEndereco.Text = dgr.Cells[4].Value.ToString();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Cliente cli = new Cliente();
+            
         }
     }
 }

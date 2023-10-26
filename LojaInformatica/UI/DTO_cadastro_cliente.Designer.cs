@@ -50,6 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
@@ -152,6 +154,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.btnAlterar);
             this.panel1.Controls.Add(this.dgvCliente);
             this.panel1.Controls.Add(this.txtCpf);
             this.panel1.Controls.Add(this.btnCadastrar);
@@ -261,12 +264,33 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Nome";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(37, 78);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(15, 13);
+            this.lblId.TabIndex = 11;
+            this.lblId.Text = "id";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAlterar.Location = new System.Drawing.Point(563, 266);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(131, 34);
+            this.btnAlterar.TabIndex = 22;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 575);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
@@ -306,5 +330,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

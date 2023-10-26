@@ -107,5 +107,18 @@ namespace LojaInformatica
         {
             this.Close();
         }
+
+        private void dgvColaborador_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgr = dgvColaborador.Rows[e.RowIndex];
+            lblId.Text = dgr.Cells[0].Value.ToString();
+            txtNome.Text = dgr.Cells[1].Value.ToString();
+            txtTelefone.Text = dgr.Cells[7].Value.ToString();
+            txtCpf.Text = dgr.Cells[2].Value.ToString();
+            txtCargo.Text = dgr.Cells[5].Value.ToString();
+            txtSalario.Text = dgr.Cells[6].Value.ToString();
+            txtEmail.Text = dgr.Cells[3].Value.ToString();
+            txtEndereco.Text = dgr.Cells[4].Value.ToString();
+        }
     }
 }
